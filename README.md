@@ -3,9 +3,8 @@
 This code implements and evaluates algorithms for the paper "Optimistic Whittle Index Policy: Online Learning for Restless Bandits" from AAAI 2023. In this paper we introduce UCWhittle, an upper confidence bound (UCB) based algorithm to learn Whittle index policies for restless bandits when transition probabilities are unknown.
 
 [Optimistic Whittle Index Policy: Online Learning for Restless Bandits](https://arxiv.org/abs/2205.15372)
-Kai Wang*, Lily Xu*, Aparna Taneja, Milind Tambe
 
-Due to the sensitive nature of the maternal health data from ARMMAN, we are unable to share the real dataset but we include the synthetic data simulator.
+Kai Wang*, Lily Xu*, Aparna Taneja, Milind Tambe
 
 ```
 @inproceedings{wang2023online,
@@ -15,6 +14,8 @@ Due to the sensitive nature of the maternal health data from ARMMAN, we are unab
   year={2023},
 }
 ```
+
+Due to the sensitive nature of the maternal health data from ARMMAN, we are unable to share the real dataset but we include the synthetic data simulator.
 
 This project is licensed under the terms of the MIT license.
 
@@ -59,12 +60,12 @@ The options are
 
 
 ## Requirements
-python==3.9.12
-seaborn==0.11.2
-matplotlib==3.5.1
-gym==0.21.0
-pandas==1.4.1
-scipy==1.7.3
-scikit-learn==1.0.2
-numpy==1.21.5
-gurobi==9.5.1
+- python==3.9.12
+- seaborn==0.11.2
+- matplotlib==3.5.1
+- gym==0.21.0
+- pandas==1.4.1
+- scipy==1.7.3
+- scikit-learn==1.0.2
+- numpy==1.21.5
+- gurobi==9.5.1
