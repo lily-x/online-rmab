@@ -38,6 +38,10 @@ To execute the code and run experiments comparing UCWhittle and the baselines, r
 python main.py
 ```
 
+In `main.py`,
+- 'ucw_value' corresponds to the main approach, UCW-value (P_V from Section 5.2), and
+- 'ucw_qp' corresponds to our heuristic approach, UCW-penalty (P_m in Section 5.4).
+
 To vary the settings, use the options:
 
 ```sh

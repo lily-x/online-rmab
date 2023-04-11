@@ -150,7 +150,7 @@ if __name__ == '__main__':
         rewards['optimal']    = optimal_policy(simulator, n_episodes, n_epochs, discount)
         runtimes['optimal']   = time.time() - start
 
-    if 'ucw_value' in use_algos:
+    if 'ucw_value' in use_algos: # UCW-value (P_V, main approach)
         print('-------------------------------------------------')
         print('UCWhittle - value-based QP')
         print('-------------------------------------------------')
@@ -158,7 +158,7 @@ if __name__ == '__main__':
         rewards['ucw_value']  = UCWhittle_value(simulator, n_episodes, n_epochs, discount, alpha=alpha)
         runtimes['ucw_value'] = time.time() - start
 
-    if 'ucw_qp' in use_algos:
+    if 'ucw_qp' in use_algos: # UCW-penalty (P_m, heuristic approach)
         print('-------------------------------------------------')
         print('UCWhittle QP')
         print('-------------------------------------------------')
@@ -166,7 +166,7 @@ if __name__ == '__main__':
         rewards['ucw_qp']  = UCWhittle(simulator, n_episodes, n_epochs, discount, alpha=alpha, method='QP')
         runtimes['ucw_qp'] = time.time() - start
 
-    if 'ucw_qp_min' in use_algos:
+    if 'ucw_qp_min' in use_algos: # quadratic constraint program (QCP) that directly minimizes lambda (penalty)
         print('-------------------------------------------------')
         print('UCWhittle QP - minimizing')
         print('-------------------------------------------------')
@@ -174,7 +174,7 @@ if __name__ == '__main__':
         rewards['ucw_qp_min']  = UCWhittle(simulator, n_episodes, n_epochs, discount, alpha=alpha, method='QP-min')
         runtimes['ucw_qp_min'] = time.time() - start
 
-    if 'ucw_ucb' in use_algos:
+    if 'ucw_ucb' in use_algos: # use upper confidence bounds
         print('-------------------------------------------------')
         print('UCWhittle UCB')
         print('-------------------------------------------------')
@@ -182,7 +182,7 @@ if __name__ == '__main__':
         rewards['ucw_ucb']  = UCWhittle(simulator, n_episodes, n_epochs, discount, alpha=alpha, method='UCB')
         runtimes['ucw_ucb'] = time.time() - start
 
-    if 'ucw_extreme' in use_algos:
+    if 'ucw_extreme' in use_algos: # UCW-extreme (extreme points)
         print('-------------------------------------------------')
         print('UCWhittle extreme points')
         print('-------------------------------------------------')
@@ -190,7 +190,7 @@ if __name__ == '__main__':
         rewards['ucw_extreme']  = UCWhittle(simulator, n_episodes, n_epochs, discount, alpha=alpha, method='extreme')
         runtimes['ucw_extreme'] = time.time() - start
 
-    if 'wiql' in use_algos:
+    if 'wiql' in use_algos: # WIQL from Biswas et al.
         print('-------------------------------------------------')
         print('WIQL')
         print('-------------------------------------------------')
@@ -198,7 +198,7 @@ if __name__ == '__main__':
         rewards['wiql']        = WIQL(simulator, n_episodes, n_epochs)
         runtimes['wiql']       = time.time() - start
 
-    if 'random' in use_algos:
+    if 'random' in use_algos: # random policy
         print('-------------------------------------------------')
         print('random policy')
         print('-------------------------------------------------')
